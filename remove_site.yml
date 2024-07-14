@@ -1,0 +1,48 @@
+---
+
+- hosts: web_servers
+  become: true
+  tasks:
+
+  - name: Remove apache2 and php support package(Debian)
+    apt:
+      name:
+        - apache2
+        - libapache2-mod-php
+      state: absent
+    when: ansible_distribution in ["Ubuntu","Debian"]
+
+  - name: Remove apache and php support (CentOS)
+    dnf:
+      name:
+        - httpd
+        - php
+      state: absent
+    when: ansible_distribution == "CentOS"
+
+- hosts: db_servers
+  become: true
+  tasks:
+
+  - name: Remove mariadb package(CentOS)
+    dnf:
+      name: mariadb
+      state: absent
+    when: ansible_distribution == "CentOS"
+
+  - name: Remove mariadb package(Debian)
+    apt:
+      name: mariadb-server
+      state: absent
+    when: ansible_distribution == "Debian"
+
+- hosts: file_servers
+  become: true
+  tasks:
+
+  - name: Remove file server samba package
+    package:
+      name: samba
+      state: absent
+
+
