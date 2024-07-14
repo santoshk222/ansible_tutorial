@@ -16,6 +16,24 @@
       update_cache: yes
     when: ansible_distribution == "Debian"
 
+- hosts: workstations
+  become: true
+  tasks:
+
+  - name: install unzip
+    package:
+      name: unzip
+
+  - name: install terraform
+    unarchive:
+      src: https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip
+      dest: /usr/local/bin
+      remote_src: yes
+      mode: 0755
+      owner: root
+      group: root
+
+
 - hosts: web_servers
   become: true
   tasks:
@@ -35,6 +53,14 @@
         - php
       state: latest
     when: ansible_distribution == "CentOS"
+
+  - name: copy default html file for web site
+    copy:
+      src: default_site.html
+      dest: /var/www/html/index.html
+      owner: root
+      group: root
+      mode: 0644
 
 - hosts: db_servers
   become: true
