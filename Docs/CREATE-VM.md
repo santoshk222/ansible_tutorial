@@ -1,4 +1,4 @@
-## Download and Install VM
+## 📥 Download and Install VM
 
 1. Download VM from osboxes.org
   	- Open https://www.osboxes.org/
@@ -20,12 +20,13 @@
 	- Click on Next
 	- Next screen, click on Finish
 
-VM is ready, click on Start
+VM is ready, click on Start ✨🚀
+ 
 
 ![image](https://github.com/user-attachments/assets/40fc7fcc-887a-4cc1-95e0-023fdf4d9c46)
 
 
-## Create clones of the VM (using linked type)
+## 🔄 Create clones of the VM (using linked type)
 
 Linked type saves memory
 
@@ -38,7 +39,7 @@ Linked type saves memory
 ![image](https://github.com/user-attachments/assets/d75dd83c-d784-4825-8cd6-e8aba201af5d)
 
 
-## Assign static ip to VMs
+## 🌐 Assign static ip to VMs
 
 	1. In each VM
 	2. Open settings
@@ -53,7 +54,7 @@ Linked type saves memory
 
 ![image](https://github.com/user-attachments/assets/1d51ac6d-df3a-4c63-a2c8-65c9ac9ec6ec)
 
-## Reference
+## 📚 Reference
 https://www.youtube.com/watch?v=K-_wfLZeIzg 
 
 
