@@ -1,8 +1,7 @@
 ## Download and Install VM
-Steps
 
 1. Download VM from osboxes.org
-  - Open https://www.osboxes.org/
+  	- Open https://www.osboxes.org/
 	- Select Virtual box images
 	- Select Debian (it will contain username and password)
 	- Download
@@ -34,12 +33,12 @@ Linked type saves memory
 	2. Right click on it, select Clone
 	3. Give preferred name, select Next
 	4. Clone Type : select Linked Clone
-  5. Select Finish
+	5. Select Finish
 
 ![image](https://github.com/user-attachments/assets/d75dd83c-d784-4825-8cd6-e8aba201af5d)
 
 
-Assign static ip to VMs
+## Assign static ip to VMs
 
 	1. In each VM
 	2. Open settings
